@@ -1,0 +1,51 @@
+#{extends 'main.html' /}
+#{set title:'Fill Database' /}
+  
+#{if categories}
+
+    <h3>Fill 4sqr database with venues based on:</h3>            
+	 
+	#{form @Application.fillVenuesDb()}
+
+		<p>
+		    <div class="categories">    
+			     	<div class="category">
+						<select name="categoryId">
+							#{list items:categories, as:'category'}					
+						  		<option value="${category.getId()}">${category.getName()}</option>
+		        			#{/list}				  
+						</select>     
+					</div>		
+
+		    </div>
+		</p>
+
+	    <p>
+	        <label for="ll">Latitude, Longitude: </label>
+	        <input type="text" name="ll" id="ll" />
+	    </p>
+
+	    <p>
+	        <label for="city">City: </label>
+	        <input type="text" name="city" id="city" />
+	    </p>
+	    
+	    <p>
+	        <input type="submit" value="Fill database" />
+	    </p>
+	#{/form}         
+
+    <h3>Or... Find venues around you:</h3>            
+	 
+	#{form @Application.findVenuesAround()}
+	    
+	    <p>
+	        <label for="ll">Latitude, Longitude: </label>
+	        <input type="text" name="ll" id="ll" />
+	    </p>
+
+	    <p>
+	        <input type="submit" value="Find Venues" />
+	    </p>
+	#{/form}    	
+#{/if}
