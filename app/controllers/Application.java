@@ -7,7 +7,9 @@ import models.FoursquareCredentials;
 import models.Venue;
 import play.mvc.Controller;
 import play.mvc.Util;
-import foursquare.*;
+import foursquare.CategoryResponse;
+import foursquare.FoursquareConnectionManager;
+import foursquare.VenueResponse;
 
 
 public class Application extends Controller {
