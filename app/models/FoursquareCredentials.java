@@ -30,6 +30,12 @@ public class FoursquareCredentials extends GenericModel {
 		this.clientSecret = clientSecret;
 	}		
 	
+	
+	public String getId() {
+		return id;
+	}
+
+
 	public String getClientId() {
 		return clientId;
 	}

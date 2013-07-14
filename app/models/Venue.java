@@ -31,6 +31,22 @@ public class Venue extends GenericModel {
 		this.lng = longitude;
 	}
 
+	
+	public String getId() {
+		return id;
+	}
+
+
+	public double getLat() {
+		return lat;
+	}
+
+
+	public double getLng() {
+		return lng;
+	}
+
+
 	public void setId(String id) {
 		this.id = id;
 	}
