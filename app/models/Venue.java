@@ -1,19 +1,15 @@
 package models;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 import org.hibernate.annotations.GenericGenerator;
 
-import play.db.jpa.Model;
+import play.db.jpa.GenericModel;
 
 @Entity
-public class Venue extends Model {
+public class Venue extends GenericModel {
 
 	@Id
 	@GeneratedValue(generator = "system-uuid")
@@ -22,9 +18,9 @@ public class Venue extends Model {
 	
 	private String name;
 	
-	private double lat;
+	private double lat = 0;
 	
-	private double lng;
+	private double lng = 0;
 	
 	private String locationId;
 
